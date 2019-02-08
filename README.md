@@ -7,7 +7,7 @@ Made with HTML, CSS, JS, and :heart:
 ## TODO:
 
 - [x] Markup
-- [ ] Styles
+- [x] Styles
 - [ ] Generate board
 - [ ] Turn logic
 - [ ] Win logic
