@@ -10,9 +10,9 @@ Made with HTML, CSS, JS, and :heart:
 - [x] Styles
 - [x] Generate board
 - [ ] Game rules
-	- [ ] selecting input toggles color
-	- [ ] change whose turn it is
-	- [ ] change whose turn is displayed
+	- [x] selecting input toggles color
+	- [x] change whose turn it is
+	- [x] change whose turn is displayed
 	- [ ] disable invalid slots
 - [ ] Win logic
 
@@ -25,3 +25,5 @@ Made with HTML, CSS, JS, and :heart:
 - Highlight selected/hovered column
 - Reset button
 - Scoreboard?
+- History/turn counter
+	- Undo moves

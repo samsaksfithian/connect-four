@@ -6,6 +6,8 @@
 	margin-bottom: 3vh;
 	width: 100%;
 	max-width: 700px;
+	/* height: 100%;
+	max-height: 700px; */
 }
 
 .slot {
@@ -32,7 +34,7 @@
 }
 
 .slot input[type=checkbox] {
-	/* display: none; */
+	display: none;
 }
 
 
