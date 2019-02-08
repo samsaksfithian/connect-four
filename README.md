@@ -9,8 +9,13 @@ Made with HTML, CSS, JS, and :heart:
 - [x] Markup
 - [x] Styles
 - [x] Generate board
-- [ ] Turn logic
+- [ ] Game rules
+	- [x] selecting input toggles color
+	- [x] change whose turn it is
+	- [x] change whose turn is displayed
+	- [x] disable invalid slots
 - [ ] Win logic
+- [ ] Make JS code modular
 
 ## Possible Extra Features
 
@@ -19,3 +24,7 @@ Made with HTML, CSS, JS, and :heart:
 - Color selector
 - Name selector
 - Highlight selected/hovered column
+- Reset button
+- Scoreboard?
+- History/turn counter
+	- Undo moves

@@ -5,7 +5,7 @@ h1 {
 	font-size: 40px;
 	margin: 0;
 	/* margin-top: 4vh; */
-	text-shadow: 0.7px 0.7px 1.5px rgba(0, 0, 0, 0.6);
+	text-shadow: 1px 1px 1.5px rgba(0, 0, 0, 0.8);
 	letter-spacing: 1px;
 
 	height: 0;
@@ -22,10 +22,18 @@ h2#turn-indicator {
 	/* letter-spacing: 0.5px; */
 }
 
-h2#turn-indicator #player-indicator.player1 {
+/* h2#turn-indicator #player-indicator.player1 {
 	color: var(--player1-color);
 }
 
 h2#turn-indicator #player-indicator.player2 {
+	color: var(--player2-color);
+} */
+
+.player1 {
+	color: var(--player1-color);
+}
+
+.player2 {
 	color: var(--player2-color);
 }
