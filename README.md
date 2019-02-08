@@ -13,8 +13,9 @@ Made with HTML, CSS, JS, and :heart:
 	- [x] selecting input toggles color
 	- [x] change whose turn it is
 	- [x] change whose turn is displayed
-	- [ ] disable invalid slots
+	- [x] disable invalid slots
 - [ ] Win logic
+- [ ] Make JS code modular
 
 ## Possible Extra Features
 
