@@ -1,16 +1,9 @@
-/* Styles for Connect Four */
-:root {
-	--player1-color: yellow;
-	--player2-color: red;
-	--background-color: dodgerblue;
-	--empty-color: white;
-}
-
+/* Styling for the Board and Slots */
 #board {
 	display: grid;
 	grid-template-rows: repeat(6, 100px);
 	grid-template-columns: repeat(7, 100px);
-	margin: auto;
+	margin-bottom: 3vh;
 	width: 100%;
 	max-width: 700px;
 }
@@ -41,4 +34,6 @@
 .slot input[type=checkbox] {
 	display: none;
 }
+
+
 
