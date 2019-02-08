@@ -6,8 +6,15 @@ Made with HTML, CSS, JS, and :heart:
 
 ## TODO:
 
-- [ ] Markup
-- [ ] Styles
+- [x] Markup
+- [x] Styles
 - [ ] Generate board
 - [ ] Turn logic
 - [ ] Win logic
+
+## Possible Extra Features
+
+- Animate drop
+- Color selector
+- Name selector
+- Highlight selected/hovered column
