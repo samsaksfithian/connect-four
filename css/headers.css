@@ -1,6 +1,6 @@
 /* Styles for Headers */
 h1 {
-	color: var(--background-color);
+	color: var(--title-color);
 	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 	font-size: 40px;
 	margin: 0;
