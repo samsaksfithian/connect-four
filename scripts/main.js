@@ -112,9 +112,7 @@ function checkWin(col, row, currPlayer) {
 function checkDown(col, row, currPlayer){
 	if (row < 3) { return false; }
 	for(let cr = row - 1; cr > row - 4; cr--){
-		const currSlot = document.getElementById(`slot${col}${cr}`);
-		const currSlotPlayer = currSlot.parentElement.className;
-		if(currPlayer !== currSlotPlayer) { return false; }
+		if(currPlayer !== getSlotPlayer(col, cr)) { return false; }
 	}
 	return true;
 }
@@ -126,9 +124,7 @@ function checkAcross(col, row, currPlayer){
 	for(let cc = col - 3; cc <= col + 3; cc++){
 		const inBounds = (cc >= 0 && cc < BOARD_COLS);
 		if (inBounds) {
-			const currSlot = document.getElementById(`slot${cc}${row}`);
-			const currSlotPlayer = currSlot.parentElement.className;
-			numInRow = (currPlayer === currSlotPlayer) ? numInRow + 1 : 0;
+			numInRow = (currPlayer === getSlotPlayer(cc, row)) ? numInRow + 1 : 0;
 		}
 		if (numInRow >= 4) { return true; }
 	}
@@ -143,9 +139,7 @@ function checkDiag(col, row, currPlayer){
 	for(let cc = col - 3, cr = row + 3; cc <= col + 3; cc++, cr--){
 		const inBounds = (cc >= 0 && cc < BOARD_COLS) && (cr >=0 && cr < BOARD_ROWS);
 		if (inBounds) {
-			const currSlot = document.getElementById(`slot${cc}${cr}`);
-			const currSlotPlayer = currSlot.parentElement.className;
-			numInLine = (currPlayer === currSlotPlayer) ? numInLine + 1 : 0;
+			numInLine = (currPlayer === getSlotPlayer(cc, cr)) ? numInLine + 1 : 0;
 		}
 		if (numInLine >= 4) { return true; }
 	}
@@ -155,13 +149,17 @@ function checkDiag(col, row, currPlayer){
 	for(let cc = col - 3, cr = row - 3; cc <= col + 3; cc++, cr++){
 		const inBounds = (cc >= 0 && cc < BOARD_COLS) && (cr >=0 && cr < BOARD_ROWS);
 		if (inBounds) {
-			const currSlot = document.getElementById(`slot${cc}${cr}`);
-			const currSlotPlayer = currSlot.parentElement.className;
-			numInLine = (currPlayer === currSlotPlayer) ? numInLine + 1 : 0;
+			numInLine = (currPlayer === getSlotPlayer(cc, cr)) ? numInLine + 1 : 0;
 		}
 		if (numInLine >= 4) { return true; }
 	}
 	return false;
 }
 
+// ===============================================
+
+function getSlotPlayer(col, row){
+	const currSlot = document.getElementById(`slot${col}${row}`);
+	return currSlot.parentElement.className;
+}
 
