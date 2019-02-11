@@ -3,6 +3,7 @@
 	--player1-color: yellow;
 	--player2-color: red;
 	--background-color: dodgerblue;
+	--background-color-highlight: rgba(94, 174, 255, 0.9);
 	--title-color: blue;
 	--empty-slot-color: white;
 }

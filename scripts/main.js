@@ -14,7 +14,10 @@ Coords: (col number, row number)
 const board = document.getElementById('board');
 const BOARD_ROWS = 6;
 const BOARD_COLS = 7;
+let player1Name = 'Player 1';
+let player2Name = 'Player 2';
 
+// Maybe make grid dynamically resizeable at beginning
 // board.style += `
 // 				grid-template-rows: repeat(${BOARD_ROWS}, 100px);
 // 				grid-template-columns: repeat(${BOARD_COLS}, 100px);`;
@@ -82,10 +85,10 @@ function runTurn(input){
 	// update player-indicator text
 	if(player1Turn){
 		playerIndicator.className = 'player1';
-		playerIndicator.innerText = 'Player 1';
+		playerIndicator.innerText = player1Name;
 	} else{
 		playerIndicator.className = 'player2';
-		playerIndicator.innerText = 'Player 2';
+		playerIndicator.innerText = player2Name;
 	}
 
 
