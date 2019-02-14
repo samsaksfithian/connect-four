@@ -1,5 +1,11 @@
 // Code to run the Connect Four game
 
+const board = document.getElementById('board');
+const BOARD_ROWS = 6;
+const BOARD_COLS = 7;
+let player1Name = 'Player 1';
+let player2Name = 'Player 2';
+
 // ===============================================
 // Set up board
 
@@ -11,35 +17,32 @@ Coords: (col number, row number)
 (0,0) (1,0) ... (6,0)
 */
 
-const board = document.getElementById('board');
-const BOARD_ROWS = 6;
-const BOARD_COLS = 7;
-let player1Name = 'Player 1';
-let player2Name = 'Player 2';
-
 // Maybe make grid dynamically resizeable at beginning
 // board.style += `
 // 				grid-template-rows: repeat(${BOARD_ROWS}, 100px);
 // 				grid-template-columns: repeat(${BOARD_COLS}, 100px);`;
-
-let boardHTML = '';
-// Because of CSS Grid Insert order, iterating starting at top left
-for (let row = BOARD_ROWS-1; row >= 0; row--) {
-	for (let col = 0; col < BOARD_COLS; col++) {
-		boardHTML += 
-		`<div class="slot">
-			<label for="slot${col}${row}">
-				<input onchange="runTurn(this)" type="checkbox" 
-					${row > 0 ? 'disabled' : ""}
-					name="slot${col}${row}" id="slot${col}${row}"
-					data-col="${col}" data-row="${row}">
-			</label>
-			</div>`;
-			// (${col},${row})
-		}
+function initialize(){
+	let boardHTML = '';
+	// Because of CSS Grid Insert order, iterating starting at top left
+	for (let row = BOARD_ROWS-1; row >= 0; row--) {
+		for (let col = 0; col < BOARD_COLS; col++) {
+			boardHTML += 
+			`<div class="slot">
+				<label for="slot${col}${row}">
+					<input onchange="runTurn(this)" type="checkbox" 
+						${row > 0 ? 'disabled' : ""}
+						name="slot${col}${row}" id="slot${col}${row}"
+						data-col="${col}" data-row="${row}">
+				</label>
+				</div>`;
+				// (${col},${row})
+			}
+	}
+	// Set the board's HTML
+	board.innerHTML = boardHTML;
 }
-// Set the board's HTML
-board.innerHTML = boardHTML;
+
+initialize();
 
 // ===============================================
 // ===============================================
