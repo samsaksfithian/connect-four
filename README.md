@@ -25,6 +25,7 @@ Made with HTML, CSS, JS, and :heart:
 	- [x] General
 	- [ ] Changes with player color
 - [ ] Animate drop
+- [ ] Make board grid resize with viewport
 - [ ] Highlight selected/hovered column
 - [x] Reset button
 - [ ] Choose board size at the beginning
