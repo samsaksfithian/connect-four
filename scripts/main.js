@@ -1,10 +1,12 @@
 // Code to run the Connect Four game
 
 const board = document.getElementById('board');
+const playerIndicator = document.getElementById('player-indicator');
 const BOARD_ROWS = 6;
 const BOARD_COLS = 7;
 let player1Name = 'Player 1';
 let player2Name = 'Player 2';
+let player1Turn = true;
 
 // ===============================================
 // Set up board
@@ -22,6 +24,11 @@ Coords: (col number, row number)
 // 				grid-template-rows: repeat(${BOARD_ROWS}, 100px);
 // 				grid-template-columns: repeat(${BOARD_COLS}, 100px);`;
 function initialize(){
+	// set/reset player
+	playerIndicator.className = 'player1';
+	playerIndicator.innerText = player1Name;
+	player1Turn = true;
+
 	let boardHTML = '';
 	// Because of CSS Grid Insert order, iterating starting at top left
 	for (let row = BOARD_ROWS-1; row >= 0; row--) {
@@ -47,8 +54,6 @@ initialize();
 // ===============================================
 // ===============================================
 // Run Turn
-const playerIndicator = document.getElementById('player-indicator');
-let player1Turn = true;
 
 function runTurn(input){
 	// ===============================================	
@@ -76,7 +81,10 @@ function runTurn(input){
 	// update win text (win celebration)
 	if (isAWin) {
 		alert('Winner!');
-		//maybe disable all slots
+		// currPlayerName = player1Turn ? player1Name : player2Name;
+		// playerIndicator.parent.innerText = `${currPlayerName} Wins!!!`;
+		
+		//TODO: disable all slots
 		return;
 	}	
 
