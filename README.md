@@ -14,7 +14,7 @@ Made with HTML, CSS, JS, and :heart:
 	- [x] change whose turn it is
 	- [x] change whose turn is displayed
 	- [x] disable invalid slots
-- [ ] Win logic
+- [x] Win logic
 - [ ] Make JS code modular
 
 ## Possible Extra Features
@@ -25,6 +25,7 @@ Made with HTML, CSS, JS, and :heart:
 - Name selector
 - Highlight selected/hovered column
 - Reset button
+- Choose board size at the beginning
 - Scoreboard?
 - History/turn counter
 	- Undo moves

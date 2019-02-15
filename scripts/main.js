@@ -1,5 +1,13 @@
 // Code to run the Connect Four game
 
+const board = document.getElementById('board');
+const playerIndicator = document.getElementById('player-indicator');
+const BOARD_ROWS = 6;
+const BOARD_COLS = 7;
+let player1Name = 'Player 1';
+let player2Name = 'Player 2';
+let player1Turn = true;
+
 // ===============================================
 // Set up board
 
@@ -11,38 +19,41 @@ Coords: (col number, row number)
 (0,0) (1,0) ... (6,0)
 */
 
-const board = document.getElementById('board');
-const BOARD_ROWS = 6;
-const BOARD_COLS = 7;
-
+// Maybe make grid dynamically resizeable at beginning
 // board.style += `
 // 				grid-template-rows: repeat(${BOARD_ROWS}, 100px);
 // 				grid-template-columns: repeat(${BOARD_COLS}, 100px);`;
+function initialize(){
+	// set/reset player
+	playerIndicator.className = 'player1';
+	playerIndicator.innerText = player1Name;
+	player1Turn = true;
 
-let boardHTML = '';
-// Because of CSS Grid Insert order, iterating starting at top left
-for (let row = BOARD_ROWS-1; row >= 0; row--) {
-	for (let col = 0; col < BOARD_COLS; col++) {
-		boardHTML += 
-		`<div class="slot">
-			<label for="slot${col}${row}">
-				<input onchange="runTurn(this)" type="checkbox" 
-					${row > 0 ? 'disabled' : ""}
-					name="slot${col}${row}" id="slot${col}${row}"
-					data-col="${col}" data-row="${row}">
-			</label>
-			</div>`;
-			// (${col},${row})
-		}
+	let boardHTML = '';
+	// Because of CSS Grid Insert order, iterating starting at top left
+	for (let row = BOARD_ROWS-1; row >= 0; row--) {
+		for (let col = 0; col < BOARD_COLS; col++) {
+			boardHTML += 
+			`<div class="slot">
+				<label for="slot${col}${row}">
+					<input onchange="runTurn(this)" type="checkbox" 
+						${row > 0 ? 'disabled' : ""}
+						name="slot${col}${row}" id="slot${col}${row}"
+						data-col="${col}" data-row="${row}">
+				</label>
+				</div>`;
+				// (${col},${row})
+			}
+	}
+	// Set the board's HTML
+	board.innerHTML = boardHTML;
 }
-// Set the board's HTML
-board.innerHTML = boardHTML;
+
+initialize();
 
 // ===============================================
 // ===============================================
 // Run Turn
-const playerIndicator = document.getElementById('player-indicator');
-let player1Turn = true;
 
 function runTurn(input){
 	// ===============================================	
@@ -70,7 +81,10 @@ function runTurn(input){
 	// update win text (win celebration)
 	if (isAWin) {
 		alert('Winner!');
-		//maybe disable all slots
+		// currPlayerName = player1Turn ? player1Name : player2Name;
+		// playerIndicator.parent.innerText = `${currPlayerName} Wins!!!`;
+		
+		//TODO: disable all slots
 		return;
 	}	
 
@@ -82,10 +96,10 @@ function runTurn(input){
 	// update player-indicator text
 	if(player1Turn){
 		playerIndicator.className = 'player1';
-		playerIndicator.innerText = 'Player 1';
+		playerIndicator.innerText = player1Name;
 	} else{
 		playerIndicator.className = 'player2';
-		playerIndicator.innerText = 'Player 2';
+		playerIndicator.innerText = player2Name;
 	}
 
 
