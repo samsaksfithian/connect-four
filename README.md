@@ -9,7 +9,7 @@ Made with HTML, CSS, JS, and :heart:
 - [x] Markup
 - [x] Styles
 - [x] Generate board
-- [ ] Game rules
+- [x] Game rules
 	- [x] selecting input toggles color
 	- [x] change whose turn it is
 	- [x] change whose turn is displayed
@@ -19,13 +19,15 @@ Made with HTML, CSS, JS, and :heart:
 
 ## Possible Extra Features
 
-- Multicolor title
-- Animate drop
-- Color selector
-- Name selector
-- Highlight selected/hovered column
-- Reset button
-- Choose board size at the beginning
-- Scoreboard?
-- History/turn counter
-	- Undo moves
+- [ ] Color selector
+- [ ] Name selector
+- [ ] Multicolor title
+	- [x] General
+	- [ ] Changes with player color
+- [ ] Animate drop
+- [ ] Highlight selected/hovered column
+- [x] Reset button
+- [ ] Choose board size at the beginning
+- [ ] Scoreboard?
+- [ ] History/turn counter
+	- [ ] Undo moves
