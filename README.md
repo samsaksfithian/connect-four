@@ -10,10 +10,10 @@ Made with HTML, CSS, JS, and :heart:
 - [x] Styles
 - [x] Generate board
 - [x] Game rules
-	- [x] selecting input toggles color
-	- [x] change whose turn it is
-	- [x] change whose turn is displayed
-	- [x] disable invalid slots
+    - [x] selecting input toggles color
+    - [x] change whose turn it is
+    - [x] change whose turn is displayed
+    - [x] disable invalid slots
 - [x] Win logic
 - [ ] Make JS code modular
 
@@ -22,8 +22,8 @@ Made with HTML, CSS, JS, and :heart:
 - [ ] Color selector
 - [ ] Name selector
 - [ ] Multicolor title
-	- [x] General
-	- [ ] Changes with player color
+    - [x] General
+    - [ ] Changes with player color
 - [ ] Animate drop
 - [ ] Make board grid resize with viewport
 - [ ] Highlight selected/hovered column
@@ -31,4 +31,4 @@ Made with HTML, CSS, JS, and :heart:
 - [ ] Choose board size at the beginning
 - [ ] Scoreboard?
 - [ ] History/turn counter
-	- [ ] Undo moves
+    - [ ] Undo moves
