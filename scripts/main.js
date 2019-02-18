@@ -4,6 +4,7 @@
 
 // Imports
 import { board, playerIndicator, BOARD_COLS, BOARD_ROWS }  from "./helpers.js";
+import columnHoverSetup from "./columnhover.js";
 import runTurn from "./turn-logic.js";
 import gs from "./gamestate.js";
 
@@ -13,6 +14,7 @@ import gs from "./gamestate.js";
 
 document.getElementById('reset-button').addEventListener('click', resetBoard);
 initialize();
+columnHoverSetup();
 
 // ===================================================================
 // ===================================================================
@@ -36,11 +38,10 @@ function initialize(){
 	for (let row = BOARD_ROWS-1; row >= 0; row--) {
 		for (let col = 0; col < BOARD_COLS; col++) {
 			boardHTML += 
-			`<div class="slot">
+			`<div class="slot" data-col="${col}" data-row="${row}">
 			<label for="slot${col}${row}">
-			<input type="checkbox" 
-			${row > 0 ? 'disabled' : ""}
-			name="slot${col}${row}" id="slot${col}${row}"
+			<input type="checkbox" ${row > 0 ? 'disabled' : ""}
+			name="slot${col}${row}" id="slot${col}${row}" class="griditem"
 			data-col="${col}" data-row="${row}">
 			</label>
 			</div>`;
