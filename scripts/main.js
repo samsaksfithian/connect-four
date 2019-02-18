@@ -14,7 +14,6 @@ import gs from "./gamestate.js";
 document.getElementById('reset-button').addEventListener('click', resetBoard);
 initialize();
 
-
 // ===================================================================
 // ===================================================================
 // Set up board

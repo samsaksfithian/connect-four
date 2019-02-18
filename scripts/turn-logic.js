@@ -13,7 +13,7 @@ import gs from "./gamestate.js";
 
 /**
  * Runs a single turn when a valid board slot is clicked. Disables the clicked slot, enables the next slot, checks for a win, and changes the turn (including indicator) to the next player
- * @param {HTMLEvent} event an HTML event triggered by a click on the board
+ * @param {Event} event an HTML event triggered by a click on the board
  */
 export default function runTurn(event){
 	const input = event.target;
