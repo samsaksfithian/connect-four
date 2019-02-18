@@ -41,10 +41,10 @@ h2#turn-indicator #player-indicator.player2 {
 
 #reset-button {
 	padding: 7px;
-	/* margin: 10px 0px; */
 	border-radius: 10px;
-
+	
 	/* Maybe TODO: Sake button width same size as board */
+	margin: 10px 0px;
 	/* margin: 0px; */
 	/* width: 100%; */
 
