@@ -15,20 +15,21 @@ Made with HTML, CSS, JS, and :heart:
     - [x] change whose turn is displayed
     - [x] disable invalid slots
 - [x] Win logic
-- [ ] Make JS code modular
+- [x] Make JS code modular
 
 ## Possible Extra Features
 
+- [x] Reset button
 - [ ] Color selector
 - [ ] Name selector
 - [ ] Multicolor title
     - [x] General
     - [ ] Changes with player color
-- [ ] Animate drop
 - [ ] Make board grid resize with viewport
-- [ ] Highlight selected/hovered column
-- [x] Reset button
 - [ ] Choose board size at the beginning
+- [ ] Highlight selected/hovered column
+- [ ] Make piece drop when click on any column element
+- [ ] Animate drop
 - [ ] Scoreboard?
 - [ ] History/turn counter
     - [ ] Undo moves
