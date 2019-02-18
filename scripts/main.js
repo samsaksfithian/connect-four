@@ -9,6 +9,14 @@ import gs from "./gamestate.js";
 
 // ===================================================================
 // ===================================================================
+// Actual main non-function stuff to run on start
+
+document.getElementById('reset-button').addEventListener('click', resetBoard);
+initialize();
+
+
+// ===================================================================
+// ===================================================================
 // Set up board
 
 /* Board layout:
@@ -19,6 +27,9 @@ Coords: (col number, row number)
 (0,0) (1,0) ... (6,0)
 */
 
+/**
+ * Dynamically creates the board and replaces the HTML to have a fresh/empty board
+ */
 function initialize(){
 	
 	let boardHTML = '';
@@ -47,8 +58,9 @@ function initialize(){
 
 // ===================================================================
 
-document.getElementById('reset-button').addEventListener('click', resetBoard);
-
+/**
+ * Runs the board creation initialize() function and resets the player indicator
+ */
 function resetBoard() {
 	// re-initialize board
 	initialize();
@@ -59,7 +71,6 @@ function resetBoard() {
 	gs.setP1Turn();
 }
 
-initialize();
 
 // ===================================================================
 // ===================================================================

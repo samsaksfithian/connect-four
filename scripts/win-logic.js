@@ -7,7 +7,14 @@ import { BOARD_COLS, BOARD_ROWS, getSlotPlayer } from "./helpers.js";
 
 // ===================================================================
 // ===================================================================
-// Check for a win
+
+/**
+ * Checks for a connect four down, across, and diagonal from a particular slot
+ * @param {number} col Column of the slot
+ * @param {number} row Row of the slot
+ * @param {string} currPlayer Class name of player to check if won
+ * @returns {boolean} True if there's a win, false otherwise
+ */
 export default function checkWin(col, row, currPlayer) {
 	// Check down
 	if (checkDown(col, row, currPlayer) ) { return true; }
@@ -23,6 +30,13 @@ export default function checkWin(col, row, currPlayer) {
 
 // ===================================================================
 
+/**
+ * Checks for a connect four straight down from the given slot
+ * @param {number} col Column of the slot
+ * @param {number} row Row of the slot
+ * @param {string} currPlayer Class name of player to check if won
+ * @returns {boolean} True if there's a win, false otherwise
+ */
 function checkDown(col, row, currPlayer){
 	if (row < 3) { return false; }
 	for(let cr = row - 1; cr > row - 4; cr--){
@@ -33,6 +47,13 @@ function checkDown(col, row, currPlayer){
 
 // ===================================================================
 
+/**
+ * Checks for a connect four across sideways in either direction from the given slot
+ * @param {number} col Column of the slot
+ * @param {number} row Row of the slot
+ * @param {string} currPlayer Class name of player to check if won
+ * @returns {boolean} True if there's a win, false otherwise
+ */
 function checkAcross(col, row, currPlayer){
 	let numInRow = 0;
 	for(let cc = col - 3; cc <= col + 3; cc++){
@@ -47,6 +68,13 @@ function checkAcross(col, row, currPlayer){
 
 // ===================================================================
 
+/**
+ * Checks for a connect four diagonally, bottom left to top right and top left to bottom right, from the given slot
+ * @param {number} col Column of the slot
+ * @param {number} row Row of the slot
+ * @param {string} currPlayer Class name of player to check if won
+ * @returns {boolean} True if there's a win, false otherwise
+ */
 function checkDiag(col, row, currPlayer){
 	// diagonal down
 	let numInLine = 0;

@@ -17,7 +17,7 @@ export const playerIndicator = document.getElementById('player-indicator');
  * Gets the HTML element for a slot located at (col, row)
  * @param {number} col Column of the slot
  * @param {number} row Row of the slot
- * @returns {HTMLElement}
+ * @returns {HTMLElement} The actual slot div element
  */
 export function getSlotElement(col, row) {
 	return document.getElementById(`slot${col}${row}`);
@@ -27,7 +27,7 @@ export function getSlotElement(col, row) {
  * Gets the HTML Class Name for a slot located at (col, row)
  * @param {number} col Column of the slot
  * @param {number} row Row of the slot
- * @returns {string}
+ * @returns {string} The string class name of the the slot div element
  */
 export function getSlotPlayer(col, row){
 	return getSlotElement(col, row).parentElement.className;

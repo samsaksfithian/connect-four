@@ -22,10 +22,27 @@ class GameState {
 	/**
 	 * Returns the name of the desired player
 	 * @param {number} playerNum Number of the desired player. Between 1 and the # of players (by default 2)
-	 * @returns {string}
+	 * @returns {string} The name of the numbered player
 	 */
 	getPlayerName(playerNum){
 		return (playerNum-1 >= this.playerNames.length) ? "" : this.playerNames[playerNum-1];
+	}
+
+	/**
+	 * Returns the name of the desired player
+	 * @param {boolean} player1 True if want Player 1's name, false if want Player 2's name
+	 * @returns {string} The name of either player 1 or player 2
+	 */
+	getPlayerName(player1){
+		return (player1) ? this.playerNames[0] : this.playerNames[1];
+	}
+
+	/**
+	 * Returns the name of the current player
+	 * @returns {string} The name of the current player
+	 */
+	getCurrPlayerName(){
+		return this.getPlayerName(this.player1Turn);
 	}
 	
 	/**
