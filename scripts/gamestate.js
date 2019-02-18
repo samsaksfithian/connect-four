@@ -2,13 +2,6 @@
 // ===================================================================
 // General helper class to track all elements of the game state
 
-// export class GameState {
-// 	player1Name = 'Player 1';
-// 	player2Name = 'Player 2';
-// 	player1Turn = true;
-// 	//TODO: make getters and setters, etc
-// }
-
 
 class GameState {
 
@@ -61,6 +54,8 @@ class GameState {
 	 */
 	nextTurn(){ this.player1Turn = !this.player1Turn; }
 }
+
+
 
 // Singleton class object
 const gameState = new GameState();

@@ -15,7 +15,7 @@ h1 {
 h2#turn-indicator {
 	/* margin: 0; */
 	margin-top: 8vh;
-	margin-bottom: 0px;
+	margin-bottom: 2vh;
 	color: rgba(253, 253, 253, 0.9);
 	background-color: #333;
 	text-transform: uppercase;
@@ -41,8 +41,14 @@ h2#turn-indicator #player-indicator.player2 {
 
 #reset-button {
 	padding: 7px;
-	margin: 10px 0px;
 	border-radius: 10px;
+	
+	/* Maybe TODO: Sake button width same size as board */
+	margin: 10px 0px;
+	/* margin: 0px; */
+	/* width: 100%; */
+
+	/* Maybe TODO: make button change color with player */
 	/* background: var(--player2-color);	 */
 	/* color: var(--player1-color); */
 }

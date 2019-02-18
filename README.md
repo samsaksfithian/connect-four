@@ -27,7 +27,7 @@ Made with HTML, CSS, JS, and :heart:
     - [ ] Changes with player color
 - [ ] Make board grid resize with viewport
 - [ ] Choose board size at the beginning
-- [ ] Highlight selected/hovered column
+- [x] Highlight selected/hovered column
 - [ ] Make piece drop when click on any column element
 - [ ] Animate drop
 - [ ] Scoreboard?

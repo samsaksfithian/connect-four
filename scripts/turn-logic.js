@@ -4,7 +4,7 @@
 
 // Imports
 import checkWin from "./win-logic.js";
-import { playerIndicator, getSlotElement, BOARD_COLS, BOARD_ROWS } from "./helpers.js";
+import { playerIndicator, getSlotElement, BOARD_ROWS } from "./helpers.js";
 import gs from "./gamestate.js";
 
 // ===================================================================
@@ -77,12 +77,15 @@ function gameWon(){
  * Makes all board slots invalid so that turns can't continue. Used after a win to end the game until reset.
  */
 function disableBoard() {
-	for (let row = 0; row < BOARD_ROWS; row++) {
-		for (let col = 0; col < BOARD_COLS; col++) {
-			const slot = getSlotElement(col, row);
-			slot.disabled = true;
-		}
-	}
+	// for (let row = 0; row < BOARD_ROWS; row++) {
+	// 	for (let col = 0; col < BOARD_COLS; col++) {
+	// 		const slot = getSlotElement(col, row);
+	// 		slot.disabled = true;
+	// 	}
+	// }
+	document.querySelectorAll('.slot input[type=checkbox]').forEach(slot => {
+		slot.disabled = true;
+	});
 }
 
 // ===================================================================

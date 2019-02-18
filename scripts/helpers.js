@@ -10,6 +10,9 @@ export const BOARD_COLS = 7;
 export const board = document.getElementById('board');
 export const playerIndicator = document.getElementById('player-indicator');
 
+// export const boardBackgroundColorBase = getComputedStyle(document.body).getPropertyValue('--board-background-color-base');
+// export const boardBackgroundColorHighlight = getComputedStyle(document.body).getPropertyValue('--board-background-color-highlight');
+
 // ===================================================================
 // Helper functions
 
