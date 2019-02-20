@@ -5,6 +5,7 @@
 // Imports
 import { board, playerIndicator, BOARD_COLS, BOARD_ROWS }  from "./helpers.js";
 import columnHoverSetup from "./columnhover.js";
+import playerCustomization from "./playercustomization.js";
 import runTurn from "./turn-logic.js";
 import gs from "./gamestate.js";
 
@@ -15,6 +16,7 @@ import gs from "./gamestate.js";
 document.getElementById('reset-button').addEventListener('click', resetBoard);
 initialize();
 columnHoverSetup();
+playerCustomization();
 
 // ===================================================================
 // ===================================================================
